@@ -1,4 +1,12 @@
-var userName = "easy";
-var age = 15;
+var userName = "Andrey";
+var ageUser = 15;
 var isAdult = false;
-console.log(userName.toUpperCase());
+logAdultMsg(ageUser, userName);
+function logAdultMsg(age, name) {
+    if (age < 18) {
+        console.log("".concat(name, " is not adult"));
+    }
+    else {
+        console.log("".concat(name, " is adult"));
+    }
+}
