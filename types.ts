@@ -18,3 +18,14 @@ const logAdultMsgReturn = (age: number, name: string): string => {
         return `${name} is adult`
     }
 }
+
+
+const userData = '{"isBirthdayData": true, "ageData": 49, "userNameData": "John"}'
+const userObj: {
+    isBirthdayData: boolean,
+    ageData: number,
+    userNameData: string
+} = JSON.parse(userData)
+
+
+console.log(userObj)
