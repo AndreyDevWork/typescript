@@ -10,3 +10,11 @@ function logAdultMsg(age: number, name: string): void {
         console.log(`${name} is adult`)
     }
 }
+
+const logAdultMsgReturn = (age: number, name: string): string => {
+    if(age < 18) {
+       return `${name} is not adult`
+    } else {
+        return `${name} is adult`
+    }
+}
