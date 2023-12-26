@@ -5,14 +5,21 @@ const fetchCurr = (response: string): number => {
     return data;
 };
 
-function transferEurToUsd(available: boolean, amount: number, commission: number): void {
+const createError = (msg: string): never => {
+    throw new Error(msg)
+}
+
+
+function transferEurToUsd(available: boolean, amount: number, commission: number): string {
     if (available) {
         let res: number = fetchCurr(currRate) * amount * commission;
-        console.log(res);
+        return `${res} так`
         // Или запись в элемент на странице вместо консоли
-    } else {
-        console.log("Сейчас обмен недоступен");
+    } else if (!available) {
+        return 'не так'
     }
+    return createError('errrorrrr')
 }
 
 transferEurToUsd(true, 500, 1.05);
+
