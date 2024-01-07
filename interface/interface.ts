@@ -22,3 +22,15 @@ const serverConf: IConfigWithRole = {
 }
 
 serverConf.log('just text')
+
+
+interface IStyles {
+    [key: string]: string // Индексные свойства когда не знаем сколько будет свойств, но знаем их тип
+}
+
+const styles: IStyles = {
+    position: 'absolute',
+    top: '20px',
+    left: '50px',
+    align: 'center'
+}
